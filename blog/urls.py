@@ -17,12 +17,8 @@ from django.http import HttpResponse
 from django.contrib import admin
 from django.urls import path
 from django.shortcuts import render
+from blog.views import home_page
 
-def home_page(request):
-    context = {'date': '03/04/2019'}
-    return HttpResponse('Hi, this is the home page')
-    response = render(request, 'index.html',context)
-    return HttpResponse(response)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
